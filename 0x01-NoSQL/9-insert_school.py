@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Insert a document in Python"""
-from pymongo.collection import Collection
 
 
-def insert_school(mongo_collection: Collection, **kwargs: dict):
+def insert_school(mongo_collection, **kwargs: dict):
     """Write a Python function that inserts a new document in a collection based on kwargs:
 
         Prototype: def insert_school(mongo_collection, **kwargs):

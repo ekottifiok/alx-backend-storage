@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Change school topics"""
-from pymongo.collection import Collection
 from typing import List
 
 
-def update_topics(mongo_collection: Collection, name: str, topics: List[str]):
+def update_topics(mongo_collection, name: str, topics: List[str]):
     """Write a Python function that changes all topics of a school document based on the name:
 
         Prototype: def update_topics(mongo_collection, name, topics):

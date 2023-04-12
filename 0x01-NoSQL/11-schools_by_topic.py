@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Where can I learn Python?"""
 from pymongo.collection import Collection
+"""Collection is class"""
 from typing import Type
 
 

@@ -64,7 +64,7 @@ def replay(f: Callable) -> None:
 
     print('{} was called {} times:'.format(
         func_name,
-        0 if store.exists(func_name) != 0 and
+        0 if store.exists(func_name) == 0 and
         not store.get(func_name) else store.get(func_name)
     ))
     func_inputs = store.lrange(inputs, 0, -1)

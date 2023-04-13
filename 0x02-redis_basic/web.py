@@ -9,6 +9,7 @@ redis = Redis()
 
 def check_cache(f: Callable) -> Callable:
     """Checks the cache if the webpage is stored there"""
+
     @wraps(f)
     def wrapper(url: str) -> str:
         """
@@ -31,7 +32,7 @@ def check_cache(f: Callable) -> Callable:
 def get_page(url: str) -> str:
     """
     In this tasks, we will implement a get_page function (prototype: def
-    get_page(url: str) -> str:). The core of the function is very simple. 
+    get_page(url: str) -> str:). The core of the function is very simple.
     It uses the requests module to obtain the HTML content of a particular
     URL and returns it.
 

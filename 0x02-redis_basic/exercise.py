@@ -23,7 +23,7 @@ def count_calls(f: Callable) -> Callable:
 def call_history(f: Callable) -> Callable:
     """
     Everytime the original function will be called, we will
-    add its input parameters to one list in redis, and store 
+    add its input parameters to one list in redis, and store
     its output into another list.
     """
     @wraps(f)
@@ -109,7 +109,7 @@ class Cache:
 
     def get_int(self, key: str):
         """
-        Calls the internal get and 
+        Calls the internal get and
         passes in a function to convert to int
         """
         return self.get(key, fn=lambda d: int(d))

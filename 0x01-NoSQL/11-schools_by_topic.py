@@ -10,5 +10,5 @@ def schools_by_topic(mongo_collection, topic: str):
         topic (string) will be topic searched
     """
     return [item for item in mongo_collection.find(
-        {"topic": {"$elemMatch": {"eq": topic}}} # type: ignore
+        {"topics": {"$elemMatch": {"eq": topic}}}
     )]
